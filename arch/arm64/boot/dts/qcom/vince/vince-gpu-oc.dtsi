@@ -61,8 +61,8 @@
 		<26 512 0 8136000>, /*11. 1017.00 MHz */
 		<26 512 0 10368000>; /*12. 1296.00 MHz */
 
-	qcom,ca-target-pwrlevel = <4>;
-	qcom,initial-pwrlevel = <7>;
+	qcom,ca-target-pwrlevel = <3>;
+	qcom,initial-pwrlevel = <4>;
 	/delete-node/qcom,gpu-pwrlevels;
 
 	/* Power levels */
