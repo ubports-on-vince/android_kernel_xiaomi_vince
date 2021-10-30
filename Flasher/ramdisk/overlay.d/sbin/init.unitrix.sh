@@ -14,3 +14,6 @@ echo 512 > /sys/block/mmcblk1/queue/read_ahead_kb
 # Default IO Scheduler
 echo cfq > /sys/block/mmcblk0/queue/scheduler
 echo cfq > /sys/block/mmcblk1/queue/scheduler
+
+# Group tasks for less stutter but less throughput
+echo 1 > /proc/sys/kernel/sched_autogroup_enabled
