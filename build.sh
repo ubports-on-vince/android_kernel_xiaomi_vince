@@ -102,12 +102,19 @@ make O=out ARCH=arm64 "$CONFIG"
 if [ "$GCC_COMPILE" == "no" ]; then
 	make -j$(nproc --all) O=out \
 			      ARCH=arm64 \
+			      CC="ccache clang" \
 			      AR=llvm-ar \
 			      NM=llvm-nm \
+			      LD=ld.lld \
 			      OBJCOPY=llvm-objcopy \
 			      OBJDUMP=llvm-objdump \
+			      OBJSIZE=llvm-size \
+			      READELF=llvm-readelf \
 			      STRIP=llvm-strip \
-			      CC=clang \
+			      HOSTCC=clang \
+			      HOSTCXX=clang++ \
+			      HOSTAR=llvm-ar \
+			      HOSTLD=ld.lld \
 			      CROSS_COMPILE=aarch64-linux-gnu- \
 			      CROSS_COMPILE_ARM32=arm-linux-gnueabi- |& tee -a $HOME/build/build${BUILD}.txt
 else
