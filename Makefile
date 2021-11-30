@@ -535,6 +535,7 @@ KBUILD_CFLAGS	+= $(CLANG_FLAGS)
 KBUILD_AFLAGS	+= $(CLANG_FLAGS)
 ifeq ($(ld-name),lld)
 KBUILD_CFLAGS	+= -fuse-ld=lld
+KBUILD_HOSTLDFLAGS += -fuse-ld=lld
 endif
 KBUILD_CPPFLAGS += -Qunused-arguments
 endif
