@@ -185,6 +185,10 @@ if [ "$BRANCH" == "stable" ]; then
 	make stable &>/dev/null
 elif [ "$BRANCH" == "stable-perf" ]; then
 	make stable &>/dev/null
+elif [ "$BRANCH" == "MixUi" ]; then
+	make stable &>/dev/null
+elif [ "$BRANCH" == "MixUi-perf" ]; then
+	make stable &>/dev/null
 elif [ "$BRANCH" == "beta" ]; then
 	make beta &>/dev/null
 elif [ "$BRANCH" == "beta-perf" ]; then
